@@ -28,6 +28,7 @@ namespace TicketDesk.Web.Client.Models
         public static async Task<TicketCenterListViewModel> GetViewModelAsync(int currentPage, string listName, TdDomainContext context, string userId)
         {
             var userSettings = await context.UserSettingsManager.GetSettingsForUserAsync(userId);
+       
            
             var vm = new TicketCenterListViewModel()
             {
